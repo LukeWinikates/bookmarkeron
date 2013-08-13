@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Bookmarkeron::VERSION
   spec.authors       = ["rukednous"]
   spec.email         = ["luke.winikates@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{declare bookmarks in a yaml file, merge them into your Chrome bookmarks}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "awesome_print"
 end
