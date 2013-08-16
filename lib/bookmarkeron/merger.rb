@@ -2,7 +2,7 @@ require 'json'
 require 'yaml'
 
 module Bookmarkeron
-  CHROME_BOOKMARKS_PATH = ""
+  CHROME_BOOKMARKS_PATH = File.join(ENV["HOME"], "Library/Application Support/Google/Chrome/Default/Bookmarks")
 
   class Merger
     attr_reader :target
@@ -24,6 +24,10 @@ module Bookmarkeron
         bookmarks << bookmark
       end
       bookmarks_from_target
+    end
+
+    def result_json
+      JSON.pretty_generate result
     end
 
     def bookmarks_from_target

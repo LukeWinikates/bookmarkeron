@@ -1,0 +1,46 @@
+{
+  "checksum": "766e4e46f8c41fb89c4a9d8bcc6597b2",
+  "roots": {
+    "bookmark_bar": {
+      "children": [
+        {
+          "date_added": "12960367845477293",
+          "id": "4",
+          "name": "Instapaper",
+          "type": "url",
+          "url": "http://www.instapaper.com/u"
+        },
+        {
+          "url": "http://www.google.com",
+          "name": "cheese"
+        }
+      ],
+      "date_added": "11644473600000000",
+      "date_modified": "13016260976789146",
+      "id": "1",
+      "name": "Bookmarks Bar",
+      "type": "folder"
+    },
+    "other": {
+      "children": [
+
+      ],
+      "date_added": "11644473600000000",
+      "date_modified": "12973845768093473",
+      "id": "2",
+      "name": "Other Bookmarks",
+      "type": "folder"
+    },
+    "synced": {
+      "children": [
+
+      ],
+      "date_added": "11644473600000000",
+      "date_modified": "0",
+      "id": "3",
+      "name": "Mobile Bookmarks",
+      "type": "folder"
+    }
+  },
+  "version": 1
+}
