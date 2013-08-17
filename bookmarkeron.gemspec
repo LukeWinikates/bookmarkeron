@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["rukednous"]
   spec.email         = ["luke.winikates@gmail.com"]
   spec.description   = %q{declare bookmarks in a yaml file, merge them into your Chrome bookmarks}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = spec.description
   spec.homepage      = ""
   spec.license       = "MIT"
 
