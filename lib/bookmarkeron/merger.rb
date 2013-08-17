@@ -18,7 +18,6 @@ module Bookmarkeron
     end
 
     def result
-      puts bookmarks_from_target
       bookmarks = bookmarks_from_target["roots"]["bookmark_bar"]["children"]
       bookmark_next_id = bookmarks_from_source.size
       bookmarks_from_source.each do |bookmark|
