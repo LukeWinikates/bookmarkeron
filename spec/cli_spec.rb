@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'fakefs'
 
 module Bookmarkeron
   describe "CLI" do
@@ -13,5 +14,21 @@ module Bookmarkeron
       FileUtils.rm fixtures("cli_test")
       File.exist?(fixtures("cli_test")).should be_false
     end
+
+  xdescribe "with the -p option" do
+    it "updates the profile indicated"
+    end
+
+  describe "with no target" do
+    before do
+      # make fake files
+    end
+
+    it "finds all Bookmark files in the chrome directory and runs on those" do
+      CLI.run(fixtures("example.yml"))
+
+      # use this:find ~/Library/Application\ Support/Google/Chrome -name Bookmarks
+    end
+   end
   end
 end
