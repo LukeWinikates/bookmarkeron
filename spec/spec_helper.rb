@@ -1,4 +1,5 @@
 require 'rspec'
+require 'rspec/mocks'
 require 'bookmarkeron'
 require 'awesome_print'
 

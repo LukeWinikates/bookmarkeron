@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'fakefs'
 
 module Bookmarkeron
-  describe "CLI" do
+  describe CLI do
+
     it "writes new stuff into the target file" do
       FileUtils.cp fixtures("chrome"), fixtures("cli_test")
 
@@ -15,20 +15,19 @@ module Bookmarkeron
       File.exist?(fixtures("cli_test")).should be_false
     end
 
-  xdescribe "with the -p option" do
-    it "updates the profile indicated"
-    end
+    describe "with no target" do
+      it "finds all Bookmark files in the chrome directory and runs on those" do
+        fake_merger = double(:merger, allow: true)
+        Finder.should_receive(:find).and_return(["a", "b"])
+        Merger.should_receive(:new).with(hash_including(target: "a")).and_return(fake_merger)
+        Merger.should_receive(:new).with(hash_including(target: "b")).and_return(fake_merger)
+        fake_merger.should_receive(:result_json).twice
+        File.should_receive(:write).twice
 
-  describe "with no target" do
-    before do
-      # make fake files
-    end
+        CLI.run(fixtures("example.yml"))
 
-    it "finds all Bookmark files in the chrome directory and runs on those" do
-      CLI.run(fixtures("example.yml"))
-
-      # use this:find ~/Library/Application\ Support/Google/Chrome -name Bookmarks
+        # use this:find ~/Library/Application\ Support/Google/Chrome -name Bookmarks
+      end
     end
-   end
   end
 end
