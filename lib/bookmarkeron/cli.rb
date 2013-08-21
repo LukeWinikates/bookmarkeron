@@ -11,6 +11,8 @@ module Bookmarkeron
         merger = Merger.new({source: source, target: dest})
         File.write(dest, merger.result_json)
       end
+
+      puts "#{dests.size} profiles updated"
     end
   end
 end

@@ -1,0 +1,3 @@
+0.0.2
+ Add globbing, so that we merge bookmarks into profiles other than the default
+ profile, and don't crash if the Default profile is absent.
